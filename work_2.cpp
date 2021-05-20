@@ -10,35 +10,33 @@ int main (){
 	char width = 'X';
 	bool a = true;
 	
-	enum status {zero=79, cross=88, empty=32};
+	enum status {zero='O', cross='X', empty='_'};
 	
 	status array[x][y]= {
-		{cross, zero, empty},
-		{zero, zero, cross},
-		{cross, zero, empty},
-	};
+		{empty, empty, empty}, 
+	    {empty, empty, empty}, 
+		{empty, empty, empty}};
 	
-	// array[1][0]= zero;
-	// array[2][1]= cross;
-	// array[0][1]= empty;
+	array[1][0]= zero;
+	array[2][1]= cross;
+	array[0][1]= cross;
 	
-	// std::cout<<array[0][0]<<" "<<array[0][1]<<" "<<array[0][2]<< std::endl;
-	// std::cout<<array[1][0]<<" "<<array[1][1]<<" "<<array[1][2]<< std::endl;
-	// std::cout<<array[2][0]<<" "<<array[2][1]<<" "<<array[2][2]<< std::endl;
+	std::cout<<(char)array[0][0]<<" "<<(char)array[0][1]<<" "<<(char)array[0][2]<< std::endl;
+	std::cout<<(char)array[1][0]<<" "<<(char)array[1][1]<<" "<<(char)array[1][2]<< std::endl;
+	std::cout<<(char)array[2][0]<<" "<<(char)array[2][1]<<" "<<(char)array[2][2]<< std::endl;
 	
 	struct field {
-		enum status {zero=79, cross=88, empty=32};
+		int coordinateX;
+		int coordinateY;
 		status array[x][y];
 	};
-		
+		struct {
 		union value {
 			char value1;
-			int value2;
-			struct {
+		    int value2;};
 				unsigned is_int : 1;
 				unsigned is_char : 1;
 			}flag;
-		};
 
 	
 	
