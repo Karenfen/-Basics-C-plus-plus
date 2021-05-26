@@ -93,7 +93,7 @@ for (int i = 0; i < x; i++){
 }
 puts(" ");
 
-// // TASK - 5 =====================================================================
+// TASK - 5 =====================================================================
 
 int year;
 
@@ -106,34 +106,15 @@ if (year < 0 ){
 	continue;
 } else if (year == 0){
 	continue;
-} else {
-	if (year % 4 == 0){
-		if (year % 100 == 0){
-			if (year % 400 == 0){
-				std::cout << "Is leap year!" << std::endl;
-			} else {
-				std::cout << "Is not leap year!" << std::endl;
-			}
-		} else {
-			std::cout << "Is leap year!" << std::endl;
-		}
-	} else {
-		std::cout << "Is not leap year!" << std::endl;
-	}
-}
+} else if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)) {
+    std::cout << "Is leap year!" << std::endl;
+ } else {
+ std::cout << "Is not leap year!" << std::endl;
+ }
+	
 } while (year != 0);
 
-// or ...
- // if (year % 400 == 0) {
-    // std::cout << "Is leap year!" << std::endl;
- // } else if (&& year % 100 == 0){
-	 // std::cout << "Is not leap year!" << std::endl;
- // } else if (year > 0 && year % 4 == 0) {
-	 // std::cout << "Is leap year!" << std::endl;
- // } else if (year > 0 ){
-	 // std::cout << "Is not leap year!" << std::endl;
- // } else if (year < 0 ){
-	 // std::cout << "ERROR" << std::endl;
+
 
 	return 0;
 }
