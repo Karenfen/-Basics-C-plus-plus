@@ -32,13 +32,12 @@ reversNumb(arr, size);
 printArray(arr, size);
 }
 
-void arrayInit(int*arr, int s, ...){
-    va_list lst;
-    va_start(lst, s);
+void arrayInit(int*arr, int s, int step){
+  int val = 0;
 for (int i = 0; i < s; i++){
-    arr[i] = va_arg(lst, int);
+    arr[i] = 1 + val;
+	val += step;
 }
-va_end(lst);
 }
 
 bool arrayCheck(int*arr, int s){

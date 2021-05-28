@@ -25,10 +25,11 @@ puts(" ");
 std::cout << "Task - 2" << std::endl;
 
 const int size_2 = 8;
+int step = 3;
 int array_2[size_2];
 
  printArray(array_2, size_2);
- arrayInit(array_2, size_2, 1, 4, 7, 10, 13, 16, 19, 22);
+ arrayInit(array_2, size_2, step);
  printArray(array_2, size_2);
 
 puts(" ");
