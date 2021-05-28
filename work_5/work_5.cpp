@@ -14,7 +14,8 @@ int main (){
 	void (*F[Z])(int*, int);
 	F[0] = printArray;
 	F[1] = reversNumb;
-
+    bool (*Fch)(int*, int);
+	Fch = arrayCheck;
 // Task - 1 =====================================================
 std::cout << "Task - 1" << std::endl;
 
@@ -45,13 +46,13 @@ const int size_3 = 5;
 bool result;
 
 int array_3_1[size_3] = {10, 2, 3, 3, 2};
- result = arrayCheck(array_3_1, size_3);
+ result = (*Fch)(array_3_1, size_3);
  F[0](array_3_1, size_3);
  std::cout << result << std::endl;
 
 int array_3_2[size_3] = {10, 2, 2, 1, 10};
  F[0](array_3_2, size_3);
- result = arrayCheck(array_3_2, size_3);
+ result = (*Fch)(array_3_2, size_3);
  std::cout << result << std::endl;
 
 puts(" ");
