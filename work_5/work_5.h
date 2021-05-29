@@ -11,14 +11,12 @@ std::cout << std::endl;
 }
 
 void reversNumb (int*arr, int s){
-    int a = 1;
 for (int i = 0; i < s; i++){
-    arr[i] = arr[i] ^ a;
+    arr[i] = arr[i] ^ 1;
 }
 }
 
 void reversNumbVariabel (int size, ...){
-	int a = 1;
 	int arr[size];
 	va_list list;
     va_start(list, size);
@@ -33,10 +31,8 @@ printArray(arr, size);
 }
 
 void arrayInit(int*arr, int s, int step){
-  int val = 0;
 for (int i = 0; i < s; i++){
-    arr[i] = 1 + val;
-	val += step;
+    arr[i] = 1 + step * i;
 }
 }
 
@@ -70,13 +66,12 @@ void ArShift(int*arr, int size, signed int num){
 	for (int i = 0; i < size; i++){
 		clone[i] = arr[i];
 	}
-	if (num < 0){
+	
 	for (int j = 0; j < size; j++){
-		((j - num) < size)? (arr[j] = clone[j-num]) : (arr[j] = clone[j-num-size]);
-	}
-	} else {
-		for (int j = 0; j < size; j++){
-		(j < num)? (arr[j] = clone[size-num+j]):(arr[j] = clone[j-num]);
+		if (num < 0){
+		    ((j - num) < size)? (arr[j] = clone[j-num]) : (arr[j] = clone[j-num-size]);
+	    } else {
+		    (j < num)? (arr[j] = clone[size-num+j]) : (arr[j] = clone[j-num]);
 	}
 	}
 }

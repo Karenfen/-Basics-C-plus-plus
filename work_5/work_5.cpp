@@ -60,14 +60,14 @@ puts(" ");
 std::cout << "Task - 4" << std::endl;
 
 signed int n;
-const int size_4 = 9;
-int array_4[size_4] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+const int size_4 = 5;
+int array_4[size_4] = {1, 2, 3, 4, 5};
 
- n = -3;
+ n = -2;
  ArShift(array_4, size_4, n);
  F[0](array_4, size_4);
 
- n = 2;
+ n = 4;
  ArShift(array_4, size_4, n);
  F[0](array_4, size_4);
 
