@@ -1,6 +1,6 @@
 // Kiselev Ilia
 // homework 6
-// MinGW + CMD + Notepad++ 
+// MinGW + CMD + Notepad++
 
 #include <iostream>
 #include <cstdlib>
@@ -19,13 +19,13 @@ verse_1 << "And sorry I could not travel both\n";
 verse_1 << "And be one traveler, long I stood\n";
 verse_1 << "And looked down one as far as I could\n";
 verse_1 << "To where it bent in the undergrowth.\n";
-verse_1 << "\n";  
+verse_1 << "\n";
 verse_1 << "Then took the other, as just as fair,\n";
 verse_1 << "And having perhaps the better claim,\n";
 verse_1 << "Because it was grassy and wanted wear;\n";
 verse_1 << "Though as for that the passing there\n";
-verse_1 << "Had worn them really about the same.\n";   
-verse_1 << "\n";  
+verse_1 << "Had worn them really about the same.\n";
+verse_1 << "\n";
   verse_1.close();
 
   ofstream verse_2 ("file_2.txt");
@@ -60,7 +60,7 @@ ifstream check (check_file);
       if(word == check_word){
 		result = 1;
 		break;
-	  };	
+	  };
   }
 check.close();
 
@@ -81,25 +81,25 @@ using namespace std;
   ifstream ver_2(name_2, ios_base::ate);
 	int size_2 = ver_2.tellg();
   ver_2.close();
-	
+
 	char **arr = new char*[2];
 	arr[0] = new char[size_1];
 	arr[1] = new char[size_2];
-	
+
 	ifstream verse_a(name_1);
 	size_1 = 0;
 	  while (verse_a.get(arr[0][size_1])){
 		  size_1++;
 		}
 	verse_a.close();
-	
+
 	ifstream verse_b(name_2);
 	size_2 = 0;
 	  while (verse_b.get(arr[1][size_2])){
 		  size_2++;
 		}
 	verse_b.close();
-	
+
 	ofstream Verse (name_3);
       for (int i = 0; i < 2; i++){
 		int n;
@@ -109,7 +109,7 @@ using namespace std;
 		};
 		};
 		Verse.close();
-		
+
 		delete [] arr[0];
 		delete [] arr[1];
 		delete [] arr;
