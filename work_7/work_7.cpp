@@ -8,7 +8,7 @@ Code::Blocks + MinGW
 #include <cstdlib>
 #include <random>
 
-#define CHEK_NUMBER(x,y) (((x) >= 0 && (x) < (y))? true : false) // Task - 1 //
+#define CHEK_NUMBER(x,y) ((x) >= 0 && (x) < (y)) // Task - 1 //
 #define ROWS 10
 #define COLUMNS 10
 #define SIZE 12
