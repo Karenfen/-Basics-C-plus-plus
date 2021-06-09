@@ -37,7 +37,7 @@ verse_2 << "I doubted if I should ever come back.\n";
 verse_2 << "\n";
 verse_2 << "I shall be telling this with a sigh\n";
 verse_2 << "Somewhere ages and ages hence:\n";
-verse_2 << "Two roads diverged in a wood, and I—\n";
+verse_2 << "Two roads diverged in a wood, and Iï¿½\n";
 verse_2 << "I took the one less traveled by,\n";
 verse_2 << "And that has made all the difference.";
    verse_2.close();
